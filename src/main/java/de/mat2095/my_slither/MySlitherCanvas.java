@@ -41,7 +41,7 @@ final class MySlitherCanvas extends JPanel {
 
     private boolean[] map;
     private final MySlitherJFrame view;
-    private int zoom = 12;
+    private int zoom = 17;
     private long lastFrameTime;
     private double fps;
     final ScheduledExecutorService repaintThread;
@@ -176,10 +176,10 @@ final class MySlitherCanvas extends JPanel {
             g.setStroke(new BasicStroke(128));
             g.drawOval(-64, -64, model.gameRadius * 2 + 128, model.gameRadius * 2 + 128);
             g.setStroke(oldStroke);
-			
+
 			Random numberGenerator = new Random();
 			int num = numberGenerator.nextInt(5);
-			
+
 			if(num == 0)
 			{
 				FOOD_COLOR = new Color(0xE5FC00);
